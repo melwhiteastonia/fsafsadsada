@@ -23,6 +23,12 @@ class PersonTest {
 		Assert.assertEquals(56, p.getAge());
 	}
 	
+	@Test
+	public void testEqual2() {
+		assertEquals("Martha", new )
+		
+		
+	}
 	
 	
 }
