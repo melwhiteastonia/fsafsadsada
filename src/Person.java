@@ -5,10 +5,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Person {
+public class Person implements comparator<Person> {
 	
 	private String name; 
-    private int age; 
+    private int age;
+	//public Object length; //for read persons test 
+	public Object[] length;
     
     public Person(String name, int age) {
     	
@@ -24,10 +26,12 @@ public String getName() {
 	
 }
 
-public int getAge() {
+public Integer getAge2() {
+	//using this class for the comparator implementation 
 	
 	return age; 
 }
+
 
 public void setName( String name) {
 	
@@ -41,6 +45,10 @@ public void setAge(int age) {
 	this.age = age; 
 }
 
+public int getAge() {
+	
+	return age; 
+}
 
 public boolean equals(Object o) {
 	
@@ -70,7 +78,7 @@ public String toString() {
 
 		
 
-public static List<Person> readPersons(String fileName)
+public static List<String> readPersons(String fileName)
 throws FileNotFoundException {
     
     
@@ -86,7 +94,7 @@ throws FileNotFoundException {
           String[] csvData = line.split( "," );
           
           // Create a Person object with the retrieved data
-          Person personFromCsvLine = new Person( csvData[0], Integer.parseInt( csvData[3] ));
+          Person personFromCsvLine = new Person( csvData[0], Integer.parseInt( csvData[2] ));
           
           // Now you can add the person object to your list
           content.add( personFromCsvLine );
