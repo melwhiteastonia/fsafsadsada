@@ -78,7 +78,7 @@ public String toString() {
 
 		
 
-public static List<String> readPersons(String fileName)
+public static List<Person> readPersons(String fileName)
 throws FileNotFoundException {
     
     

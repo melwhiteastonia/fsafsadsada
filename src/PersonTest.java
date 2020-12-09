@@ -85,51 +85,50 @@ class PersonTest {
 	}
 	
 	
+	@Test
+	public void readPersons () throws FileNotFoundException
+	{
+		String[] record = new String[] { "john brown", "56", "sam konkol", "23"}; 
 
-//	@Test
-//	public void readPersons () throws FileNotFoundException
-//	{
-//		String[] record = new String[] { "john brown", "56", "sam konkol", "23"}; 
+		
+		
+	    List<String[]> expectedrecords = new ArrayList<>();
+	    expectedrecords.add( record );
+
+	    List<Person> actualrecords = new ArrayList<>();
+		String dirPath = null;
+		generatetestCSV(dirPath  + "\\csv.csv" );
+		actualrecords = Person.readPersons( dirPath  + "\\csv.csv" );
+
+	    //Assert.assertEquals( expectedrecords, actualrecords );}
+		
+		Assert.assertEquals(expectedrecords.size(),actualrecords.size());}
+
+//	    for(String record1: expectedrecords)
+//	    {
+//	        int count;
+//			String actualRecordData = actualrecords.get(count);
+//	        count++;
 //
-//		
-//		
-//	    List<String> expectedrecords = new ArrayList<>();
-//	    expectedrecords.add( record );
+//	        
+//	        Assert.assertArrayEquals(expecteds, actuals);( record1.length,actualRecordData.length);
 //
-//	    List<String> actualrecords = new ArrayList<>();
-//	    String dirPath = null;
-//		generatetestCSV( dirPath + "\\csv.csv" );
-//	    actualrecords = Person.readPersons( dirPath + "\\csv.csv" );
-//
-////	    Assert.assertEquals( expectedrecords, actualrecords );
-////		
-//		Assert.assertEquals(expectedrecords.size(),actualrecords.size());
-//	    int count = 0;}
-//
-////	    for(String[] record: expectedrecords)
-////	    {
-////	        Person actualRecordData = actualrecords.get(count);
-////	        count++;
-////
-////	        Assert.assertEquals( record.length,actualRecordData.length);
-////
-////	        for(int i = 0; i < record.length; i++)
-////	        {
-////	            Assert.assertEquals( record[i],actualRecordData[i]);
-////	        }}
-////	    }
-//	    
-//	
-//	
-//	
-////	List<String[]> expectedrecords = new ArrayList<>();
-////	expectedrecords.add(new String[]{"john brown", "56"});
-////	expectedrecords.add(new String[]{"sma konkol", "23"});
-////
-////	List<Person> actualrecords = new ArrayList<>();
-////	String dirPath = null;
-////	generatetestCSV( dirPath + "\\csv.csv" );
-////	actualrecords = Person.readPersons( dirPath  + "\\csv.csv" );
+//	        for(int i = 0; i < record1.length; i++)
+//	        {
+//	            Assert.assertEquals( record1[i],actualRecordData[i]);
+//	        }}
+//	    }
+	    
+	
+	
+	
+//	List<String[]> expectedrecords = new ArrayList<>();
+//	expectedrecords.add(new String[]{"john brown", "56"});
+//	expectedrecords.add(new String[]{"sma konkol", "23"});
+//	List<Person> actualrecords = new ArrayList<>();
+//	String dirPath = null;
+//	generatetestCSV( dirPath + "\\csv.csv" );
+////	
 //////	actualrecords.add(new String[]{"foo", "bar"});
 //////	actualrecords.add(new String[]{"baz", "qux"});
 ////
