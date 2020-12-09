@@ -85,25 +85,25 @@ class PersonTest {
 	}
 	
 	
-	@Test
-	public void readPersons () throws FileNotFoundException
-	{
-		String[] record = new String[] { "john brown", "56", "sam konkol", "23"}; 
-
-		
-		
-	    List<String[]> expectedrecords = new ArrayList<>();
-	    expectedrecords.add( record );
-
-	    List<Person> actualrecords = new ArrayList<>();
-		String dirPath = null;
-		generatetestCSV(dirPath  + "\\csv.csv" );
-		actualrecords = Person.readPersons( dirPath  + "\\csv.csv" );
-
-	   
-		Assert.assertEquals(expectedrecords.size(),actualrecords.size());}
-
+//	@Test
+//	public void readPersons () throws FileNotFoundException
+//	{
+//		String[] record = new String[] { "john brown", "56", "sam konkol", "23"}; 
+//
+//		
+//		
+//	    List<String[]> expectedrecords = new ArrayList<>();
+//	    expectedrecords.add( record );
+//
+//	    List<Person> actualrecords = new ArrayList<>();
+//		String dirPath = null;
+//		generatetestCSV(dirPath  + "\\csv.csv" );
+//		actualrecords = Person.readPersons( dirPath  + "\\csv.csv" );
+//
 //	   
+//		Assert.assertEquals(expectedrecords.size(),actualrecords.size());}
+//
+////	   
 	private void generatetestCSV ( String fileName )
 	{
 	    try
